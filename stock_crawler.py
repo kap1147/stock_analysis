@@ -3,7 +3,7 @@ from selenium import webdriver
 import pandas as pd
 
 
-class StockData:
+class YFStockData:
     def get_data(self, url):
         # Configure and make request with Selenium
         path = r'./chromedriver.exe'
@@ -57,5 +57,5 @@ class StockData:
         stocks.to_excel('most_active.xlsx')
 
 
-stocks = StockData()
-stocks.get_top_gainers()
+stocks = YFStockData()
+stocks.get_top_losers()
